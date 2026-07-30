@@ -253,7 +253,7 @@ function HeroSection() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="https://lh3.googleusercontent.com/d/1Buq7OkaGicPAEN3hKTNEzg7rqR2Q1Kg5" type="video/mp4" />
+        <source src="/videos/agadir.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-black/50" />
       <div className="absolute inset-0 gradient-glow noise-overlay" />
@@ -358,7 +358,7 @@ function ShowreelSection() {
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover"
               >
-                <source src="https://lh3.googleusercontent.com/d/1jxtPTgnXa_yR9L30XbW2-eTwzHfq2Ijv" type="video/mp4" />
+                <source src="/videos/SSMT_ads.mp4" type="video/mp4" />
               </video>
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/70 to-[#0a0a0a]/40" />
 
@@ -410,7 +410,7 @@ function ShowreelSection() {
                 className="w-full h-full rounded-lg shadow-2xl"
                 style={{ maxHeight: '90vh' }}
               >
-                <source src="https://lh3.googleusercontent.com/d/1jxtPTgnXa_yR9L30XbW2-eTwzHfq2Ijv" type="video/mp4" />
+                <source src="/videos/SSMT_ads.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 
@@ -542,21 +542,21 @@ const projects = [
   {
     title: 'LDK',
     category: 'Commercial',
-    video: 'https://lh3.googleusercontent.com/d/1PtPxrpaiROLCADHRR-ok0PAS1as84dkc',
+    video: '/videos/snackads.mp4',
     aspect: 'aspect-[4/3] lg:aspect-auto lg:row-span-2 lg:h-full',
     span: 'lg:col-span-2',
   },
   {
     title: 'IS & MALL',
     category: 'Brand Film',
-    video: 'https://lh3.googleusercontent.com/d/1G73GIEcahr4ioxnkzdNcNqn8HRXOCPA2',
+    video: '/videos/ismallClothes.mp4',
     aspect: 'aspect-[4/3] lg:aspect-[3/4]',
     span: 'lg:col-span-1',
   },
   {
     title: 'MIAAMAR',
     category: 'Showreel',
-    video: 'https://lh3.googleusercontent.com/d/1yUqpefdDfyd-D66m-ODUfxf9XGawYRJM',
+    video: '/videos/REEL.mp4',
     aspect: 'aspect-[4/3] lg:aspect-[3/4]',
     span: 'lg:col-span-1',
   },
