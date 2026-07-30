@@ -780,8 +780,8 @@ function MethodologySection() {
 /* ------------------------------------------------------------------ */
 
 const carouselImages = [
-  { src: '/videos/POST%203.jpg.jpeg', alt: 'POST 3' },
-  { src: '/Artboard%201.jpg.jpeg', alt: 'Artboard 1' },
+  { src: '/Capture2.PNG', alt: 'Capture 2' },
+  { src: '/studio1.PNG', alt: 'Studio 1' },
 ];
 
 function ImageCarousel() {
