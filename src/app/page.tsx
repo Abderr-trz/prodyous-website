@@ -239,6 +239,13 @@ function HeroSection() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   const y = useTransform(scrollYProgress, [0, 0.5], [0, 80]);
 
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = true;
+    video.play().catch(() => {});
+  }, []);
+
   return (
     <section
       id="hero"
@@ -320,6 +327,13 @@ function ShowreelSection() {
   const fullscreenVideoRef = useRef<HTMLVideoElement | null>(null);
   const previewVideoRef = useRef<HTMLVideoElement | null>(null);
   const MAX_DURATION = 120;
+
+  useEffect(() => {
+    const video = previewVideoRef.current;
+    if (!video) return;
+    video.muted = true;
+    video.play().catch(() => {});
+  }, []);
 
   useEffect(() => {
     const video = fullscreenVideoRef.current;
@@ -563,6 +577,13 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
   const previewRef = useRef<HTMLVideoElement | null>(null);
   const fullscreenRef = useRef<HTMLVideoElement | null>(null);
   const [showFullscreen, setShowFullscreen] = useState(false);
+
+  useEffect(() => {
+    const video = previewRef.current;
+    if (!video) return;
+    video.muted = true;
+    video.play().catch(() => {});
+  }, [project.video]);
 
   useEffect(() => {
     const video = fullscreenRef.current;
