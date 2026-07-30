@@ -243,7 +243,7 @@ function HeroSection() {
     const video = videoRef.current;
     if (!video) return;
     video.muted = true;
-    video.play().catch(() => {});
+    video.play().catch(() => { });
   }, []);
 
   return (
@@ -287,7 +287,7 @@ function HeroSection() {
 
         <FadeInWhenVisible delay={0.7}>
           <p className="mt-6 sm:mt-8 max-w-xl text-sm sm:text-base text-white/50 leading-relaxed">
-            We don&apos;t just capture footage , we architect cinematic experiences. 
+            We don&apos;t just capture footage , we architect cinematic experiences.
             From aerial cinematography to razor-sharp editing, every frame is engineered for maximum impact.
           </p>
         </FadeInWhenVisible>
@@ -332,7 +332,7 @@ function ShowreelSection() {
     const video = previewVideoRef.current;
     if (!video) return;
     video.muted = true;
-    video.play().catch(() => {});
+    video.play().catch(() => { });
   }, []);
 
   useEffect(() => {
@@ -583,14 +583,14 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
     const video = previewRef.current;
     if (!video) return;
     video.muted = true;
-    video.play().catch(() => {});
+    video.play().catch(() => { });
   }, [project.video]);
 
   useEffect(() => {
     const video = fullscreenRef.current;
     if (!video || !showFullscreen) return;
     video.currentTime = 0;
-    video.play().catch(() => {});
+    video.play().catch(() => { });
   }, [showFullscreen]);
 
   return (
@@ -1330,7 +1330,7 @@ function Footer() {
 
           <div className="flex items-center justify-center sm:justify-end flex-wrap gap-x-5 gap-y-2 sm:gap-x-8">
             {[
-              { name: 'Instagram', url: 'https://instagram.com/prodyous' },
+              { name: 'Instagram', url: 'https://www.instagram.com/prod.yous/' },
               { name: 'Facebook', url: 'https://web.facebook.com/prodyous/?ref=PROFILE_EDIT_xav_ig_profile_page_web#' },
               { name: 'WhatsApp', url: 'https://wa.me/212706801105' },
             ].map((social) => (
