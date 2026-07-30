@@ -254,13 +254,16 @@ function HeroSection() {
     >
       <video
         ref={videoRef}
-        src="https://res.cloudinary.com/cxbbvqvr/video/upload/v1785413087/agadir_g2qoo2.mp4"
         autoPlay
         muted
         loop
         playsInline
+        preload="metadata"
+        crossOrigin="anonymous"
         className="absolute inset-0 w-full h-full object-cover"
-      />
+      >
+        <source src="https://res.cloudinary.com/cxbbvqvr/video/upload/v1785413087/agadir_g2qoo2.mp4" type="video/mp4" />
+      </video>
       <div className="absolute inset-0 bg-black/50" />
       <div className="absolute inset-0 gradient-glow noise-overlay" />
 
@@ -366,13 +369,16 @@ function ShowreelSection() {
               <video
                 key="preview-video"
                 ref={previewVideoRef}
-                src="https://res.cloudinary.com/cxbbvqvr/video/upload/v1785418606/SSMT_ads_1_1_q3zral.mp4"
                 autoPlay
                 muted
                 loop
                 playsInline
+                preload="metadata"
+                crossOrigin="anonymous"
                 className="absolute inset-0 w-full h-full object-cover"
-              />
+              >
+                <source src="https://res.cloudinary.com/cxbbvqvr/video/upload/v1785418606/SSMT_ads_1_1_q3zral.mp4" type="video/mp4" />
+              </video>
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/70 to-[#0a0a0a]/40" />
 
               <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
@@ -417,13 +423,16 @@ function ShowreelSection() {
             >
               <video
                 ref={fullscreenVideoRef}
-                src="https://res.cloudinary.com/cxbbvqvr/video/upload/v1785418606/SSMT_ads_1_1_q3zral.mp4"
                 autoPlay
                 muted
                 playsInline
+                preload="metadata"
+                crossOrigin="anonymous"
                 className="w-full h-full rounded-lg shadow-2xl"
                 style={{ maxHeight: '90vh' }}
-              />
+              >
+                <source src="https://res.cloudinary.com/cxbbvqvr/video/upload/v1785418606/SSMT_ads_1_1_q3zral.mp4" type="video/mp4" />
+              </video>
 
               <motion.button
                 initial={{ opacity: 0 }}
@@ -602,14 +611,16 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
           <video
             ref={previewRef}
             key={project.video}
-            src={project.video}
             autoPlay
             muted
             loop
             playsInline
-            preload="auto"
+            preload="metadata"
+            crossOrigin="anonymous"
             className="absolute inset-0 w-full h-full object-cover"
-          />
+          >
+            <source src={project.video} type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/70" />
 
           <div className="absolute inset-0 flex flex-col justify-end p-5 sm:p-7 lg:p-8 z-10">
@@ -649,14 +660,17 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
             >
               <video
                 ref={fullscreenRef}
-                key={project.video}
-                src={project.video}
+                key={`fullscreen-${project.video}`}
                 autoPlay
                 muted
                 playsInline
+                preload="metadata"
+                crossOrigin="anonymous"
                 className="w-full h-full rounded-lg shadow-2xl"
                 style={{ maxHeight: '90vh' }}
-              />
+              >
+                <source src={project.video} type="video/mp4" />
+              </video>
 
               <motion.button
                 initial={{ opacity: 0 }}
