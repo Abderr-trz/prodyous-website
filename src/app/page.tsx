@@ -562,22 +562,13 @@ const projects = [
 function ProjectCard({ project, index }: { project: (typeof projects)[0]; index: number }) {
   const previewRef = useRef<HTMLVideoElement | null>(null);
   const fullscreenRef = useRef<HTMLVideoElement | null>(null);
-  const [videoError, setVideoError] = useState(false);
   const [showFullscreen, setShowFullscreen] = useState(false);
-
-  useEffect(() => {
-    const video = previewRef.current;
-    if (!video) return;
-    const handleError = () => setVideoError(true);
-    video.addEventListener('error', handleError);
-    return () => video.removeEventListener('error', handleError);
-  }, []);
 
   useEffect(() => {
     const video = fullscreenRef.current;
     if (!video || !showFullscreen) return;
     video.currentTime = 0;
-    video.play();
+    video.play().catch(() => {});
   }, [showFullscreen]);
 
   return (
@@ -587,19 +578,17 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
           onClick={() => setShowFullscreen(true)}
           className={`group relative ${project.aspect} ${project.span} rounded-sm overflow-hidden cursor-pointer bg-[#111]`}
         >
-          {!videoError && (
-            <video
-              ref={previewRef}
-              key={project.video}
-              src={project.video}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          )}
+          <video
+            ref={previewRef}
+            key={project.video}
+            src={project.video}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/70" />
 
           <div className="absolute inset-0 flex flex-col justify-end p-5 sm:p-7 lg:p-8 z-10">
